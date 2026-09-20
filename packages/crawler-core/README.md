@@ -9,7 +9,7 @@ import { createCrawler } from '@sip01/crawler-core';
 
 const node = createCrawler({
   dbName: 'crawlstr-crawler',
-  source: 'crawlstr/2',
+  source: 'crawlstr/v2',
   signer,                       // host-injected: template → signed event
   transports: { publish },      // host-injected relay seam
   relays: { publish: ['wss://relay.ditto.pub', 'wss://relay.nos.lol'] },

@@ -43,7 +43,7 @@ export const CRAWLER_DB_NAME = 'searchstr-crawler';
 export const CORS_PROXY_TEMPLATE = 'https://proxy.shakespeare.diy/?url={href}';
 
 /** Indexer software id for the SIP-01 `source` tag. */
-export const CRAWLER_SOURCE = 'crawlstr/2';
+export const CRAWLER_SOURCE = 'crawlstr/v2';
 
 /**
  * The wire fetch the app hands to core's guardedFetch. Core supplies the
