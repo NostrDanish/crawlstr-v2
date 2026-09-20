@@ -165,8 +165,8 @@ export function CrawlerDashboard() {
                 <CardDescription>
                   {isRunning
                     ? currentSeed
-                    ? `Scouting ${currentSeedCategory ? `${currentSeedCategory} — ` : ''}${new URL(currentSeed).hostname}`
-                    : 'Scouting the open web'
+                      ? `Scouting ${currentSeedCategory ? `${currentSeedCategory} — ` : ''}${new URL(currentSeed).hostname}`
+                      : 'Scouting the open web'
                     : 'Scout the web. Feed the network.'}
                 </CardDescription>
               </div>
