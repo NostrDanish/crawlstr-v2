@@ -165,7 +165,7 @@ export function emptyStats(): CrawlerStats {
 /** The resolved (defaults-applied) configuration the engine runs on. */
 export interface ResolvedConfig {
   dbName: string;
-  source: string; // 'crawlstr/2' | 'indexstr/2'
+  source: string; // 'crawlstr/v2' | 'indexstr/v2'
   signer: (event: {
     kind: number;
     created_at: number;
