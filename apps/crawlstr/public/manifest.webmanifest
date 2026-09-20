@@ -1,0 +1,26 @@
+{
+  "name": "Crawlstr — Decentralized Web Crawler",
+  "short_name": "Crawlstr",
+  "description": "Turn your browser into a voluntary web crawler. Help build a decentralized, censorship-resistant search index.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a120d",
+  "theme_color": "#6cbf5a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/brand/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/brand/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["utilities", "productivity"],
+  "prefer_related_applications": false
+}
