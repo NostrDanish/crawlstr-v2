@@ -238,7 +238,7 @@ Crawlstr publishes **SIP-01 (Search Index Protocol)** events — the same protoc
     ["l", "en"],
     ["x", "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"],
     ["v", "1"],
-    ["source", "crawlstr/2"],
+    ["source", "crawlstr/v2"],
     ["network", "clearnet"],
     ["type", "page"],
     ["alt", "Web index observation: Example Page"]
@@ -253,7 +253,7 @@ Crawlstr publishes **SIP-01 (Search Index Protocol)** events — the same protoc
 | `x` | Content hash: `sha256(title + "\n" + description)` |
 | `v` | Schema version `"1"` |
 | `l` | ISO 639-1 language code |
-| `source` | `"crawlstr/2"` |
+| `source` | `"crawlstr/v2"` |
 | `network` | Extension registry (§9.2) — always `clearnet` for a browser crawler |
 | `type` | Extension registry — `repository` for GitHub/GitLab, else `page` |
 | `alt` | Human-readable description (the `alt` convention, spec §12.3) |
