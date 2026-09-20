@@ -1,0 +1,311 @@
+{
+  "$comment": "SIP-01 golden corpus v1 — 50 events. Byte-exact wire output of @sip01/protocol buildIndexEvent. Regenerate ONLY with an intentional wire-format change: npm run build && node scripts/generate-golden-corpus.mjs. A diff here without a spec revision = a network fork.",
+  "generatedBy": "@sip01/protocol scripts/generate-golden-corpus.mjs",
+  "schemaVersion": "1",
+  "events": [
+    {
+      "name": "#01 Example Domain",
+      "input": {
+        "url": "https://example.com/",
+        "title": "Example Domain"
+      },
+      "expected": {
+        "normalized": "https://example.com/",
+        "d": "widx:0f115db062b7c0dd030b16878c99dea5",
+        "x": "aa57cf1d596d2ccff473a2ff749717b9b3c70e436d84084aedde0f1e6adc9534",
+        "content": "{\"title\":\"Example Domain\"}",
+        "tags": [
+          [
+            "d",
+            "widx:0f115db062b7c0dd030b16878c99dea5"
+          ],
+          [
+            "u",
+            "https://example.com/"
+          ],
+          [
+            "x",
+            "aa57cf1d596d2ccff473a2ff749717b9b3c70e436d84084aedde0f1e6adc9534"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Example Domain"
+          ]
+        ],
+        "contentHashRecomputed": "aa57cf1d596d2ccff473a2ff749717b9b3c70e436d84084aedde0f1e6adc9534",
+        "documentIdRecomputed": "widx:0f115db062b7c0dd030b16878c99dea5"
+      }
+    },
+    {
+      "name": "#02 Spec Vector Page",
+      "input": {
+        "url": "HTTPS://WWW.Example.Com:443/page/?b=2&utm_source=x&a=1#top",
+        "title": "Spec Vector Page",
+        "description": "Tracks utm_source stripping."
+      },
+      "expected": {
+        "normalized": "https://example.com/page?a=1&b=2",
+        "d": "widx:f68176b3eb966bd682c3c6eadcc5fe44",
+        "x": "2b6c964d45d10ff7ae7df0d5b581483ad07fccbc1e604842c63b779c8a469360",
+        "content": "{\"title\":\"Spec Vector Page\",\"description\":\"Tracks utm_source stripping.\"}",
+        "tags": [
+          [
+            "d",
+            "widx:f68176b3eb966bd682c3c6eadcc5fe44"
+          ],
+          [
+            "u",
+            "https://example.com/page?a=1&b=2"
+          ],
+          [
+            "x",
+            "2b6c964d45d10ff7ae7df0d5b581483ad07fccbc1e604842c63b779c8a469360"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Spec Vector Page"
+          ]
+        ],
+        "contentHashRecomputed": "2b6c964d45d10ff7ae7df0d5b581483ad07fccbc1e604842c63b779c8a469360",
+        "documentIdRecomputed": "widx:f68176b3eb966bd682c3c6eadcc5fe44"
+      }
+    },
+    {
+      "name": "#03 Crwalstr Repository",
+      "input": {
+        "url": "https://github.com/NostrDanish/Crwalstr",
+        "title": "Crwalstr Repository",
+        "tags": [
+          "nostr",
+          "crawler"
+        ],
+        "platform": "github",
+        "type": "repository"
+      },
+      "expected": {
+        "normalized": "https://github.com/NostrDanish/Crwalstr",
+        "d": "widx:cdfd4df8c01d609fc9cdf943afa80197",
+        "x": "1b879df441ef43a4f8347e981c9e32ecb154f61540c6bc5264e30b29b97e951a",
+        "content": "{\"title\":\"Crwalstr Repository\"}",
+        "tags": [
+          [
+            "d",
+            "widx:cdfd4df8c01d609fc9cdf943afa80197"
+          ],
+          [
+            "u",
+            "https://github.com/NostrDanish/Crwalstr"
+          ],
+          [
+            "t",
+            "nostr"
+          ],
+          [
+            "t",
+            "crawler"
+          ],
+          [
+            "x",
+            "1b879df441ef43a4f8347e981c9e32ecb154f61540c6bc5264e30b29b97e951a"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "type",
+            "repository"
+          ],
+          [
+            "platform",
+            "github"
+          ],
+          [
+            "alt",
+            "Web index observation: Crwalstr Repository"
+          ]
+        ],
+        "contentHashRecomputed": "1b879df441ef43a4f8347e981c9e32ecb154f61540c6bc5264e30b29b97e951a",
+        "documentIdRecomputed": "widx:cdfd4df8c01d609fc9cdf943afa80197"
+      }
+    },
+    {
+      "name": "#04 Plain HTTP With Default Port",
+      "input": {
+        "url": "http://example.org:80/path/to/page/",
+        "title": "Plain HTTP With Default Port",
+        "source": "crawlstr/2"
+      },
+      "expected": {
+        "normalized": "http://example.org/path/to/page",
+        "d": "widx:408a50a4405b641c6263853d4a2329d9",
+        "x": "9d87a8408b0081285220b6f3fb4691a128a670c490bd8fa092c10308e4f49861",
+        "content": "{\"title\":\"Plain HTTP With Default Port\"}",
+        "tags": [
+          [
+            "d",
+            "widx:408a50a4405b641c6263853d4a2329d9"
+          ],
+          [
+            "u",
+            "http://example.org/path/to/page"
+          ],
+          [
+            "x",
+            "9d87a8408b0081285220b6f3fb4691a128a670c490bd8fa092c10308e4f49861"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "source",
+            "crawlstr/2"
+          ],
+          [
+            "alt",
+            "Web index observation: Plain HTTP With Default Port"
+          ]
+        ],
+        "contentHashRecomputed": "9d87a8408b0081285220b6f3fb4691a128a670c490bd8fa092c10308e4f49861",
+        "documentIdRecomputed": "widx:408a50a4405b641c6263853d4a2329d9"
+      }
+    },
+    {
+      "name": "#05 Non-Default Port",
+      "input": {
+        "url": "https://example.net:8443/secure/page?x=1#frag",
+        "title": "Non-Default Port",
+        "language": "en",
+        "published": 1754600000
+      },
+      "expected": {
+        "normalized": "https://example.net:8443/secure/page?x=1",
+        "d": "widx:5f34fe08e614b152f2fbbf448de06f68",
+        "x": "7e5b153e95458787d09ce7934bc213364fc4fa1fc4ff0dddc7ff034c3e878cfc",
+        "content": "{\"title\":\"Non-Default Port\"}",
+        "tags": [
+          [
+            "d",
+            "widx:5f34fe08e614b152f2fbbf448de06f68"
+          ],
+          [
+            "u",
+            "https://example.net:8443/secure/page?x=1"
+          ],
+          [
+            "l",
+            "en"
+          ],
+          [
+            "x",
+            "7e5b153e95458787d09ce7934bc213364fc4fa1fc4ff0dddc7ff034c3e878cfc"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "published",
+            "1754600000"
+          ],
+          [
+            "alt",
+            "Web index observation: Non-Default Port"
+          ]
+        ],
+        "contentHashRecomputed": "7e5b153e95458787d09ce7934bc213364fc4fa1fc4ff0dddc7ff034c3e878cfc",
+        "documentIdRecomputed": "widx:5f34fe08e614b152f2fbbf448de06f68"
+      }
+    },
+    {
+      "name": "#06 Search Results",
+      "input": {
+        "url": "https://example.com/search?q=nostr+protocol&utm_medium=email&gclid=AbC123&page=2",
+        "title": "Search Results",
+        "tags": [
+          "search"
+        ]
+      },
+      "expected": {
+        "normalized": "https://example.com/search?page=2&q=nostr+protocol",
+        "d": "widx:f0c8374562ad64f0d86742ec6e171b3c",
+        "x": "f66161f69523054d6c76b09f5bf9177c92c2aeaab284e6dda5b0a1cea6a795ee",
+        "content": "{\"title\":\"Search Results\"}",
+        "tags": [
+          [
+            "d",
+            "widx:f0c8374562ad64f0d86742ec6e171b3c"
+          ],
+          [
+            "u",
+            "https://example.com/search?page=2&q=nostr+protocol"
+          ],
+          [
+            "t",
+            "search"
+          ],
+          [
+            "x",
+            "f66161f69523054d6c76b09f5bf9177c92c2aeaab284e6dda5b0a1cea6a795ee"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Search Results"
+          ]
+        ],
+        "contentHashRecomputed": "f66161f69523054d6c76b09f5bf9177c92c2aeaab284e6dda5b0a1cea6a795ee",
+        "documentIdRecomputed": "widx:f0c8374562ad64f0d86742ec6e171b3c"
+      }
+    },
+    {
+      "name": "#07 Social Story",
+      "input": {
+        "url": "https://m.facebook.com/story.php?story_fbid=1&id=2&fbclid=IwAR123&mc_cid=abc&mc_eid=def",
+        "title": "Social Story"
+      },
+      "expected": {
+        "normalized": "https://m.facebook.com/story.php?id=2&story_fbid=1",
+        "d": "widx:3b3130eacd3f2699dfd777e2b2e155bf",
+        "x": "6bbda0e47cd63244c02a4d48e4cbd1a3fcf69f41ffca8f0610ba82b48aeb0db4",
+        "content": "{\"title\":\"Social Story\"}",
+        "tags": [
+          [
+            "d",
+            "widx:3b3130eacd3f2699dfd777e2b2e155bf"
+          ],
+          [
+            "u",
+            "https://m.facebook.com/story.php?id=2&story_fbid=1"
+          ],
+          [
+            "x",
+            "6bbda0e47cd63244c02a4d48e4cbd1a3fcf69f41ffca8f0610ba82b48aeb0db4"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Social Story"
+          ]
+        ],
+        "contentHashRecomputed": "6bbda0e47cd63244c02a4d48e4cbd1a3fcf69f41ffca8f0610ba82b48aeb0db4",
+        "documentIdRecomputed": "widx:3b3130eacd3f2699dfd777e2b2e155bf"
+      }
+    },
+    {
+      "name": "#08 Video With si Param",
