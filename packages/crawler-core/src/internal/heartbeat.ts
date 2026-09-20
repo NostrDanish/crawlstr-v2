@@ -105,7 +105,7 @@ export async function getCoarseCapabilities(): Promise<CoarseCapabilities> {
 }
 
 export interface HeartbeatConfig {
-  source: string; // e.g. 'crawlstr/2', 'indexstr/2'
+  source: string; // e.g. 'crawlstr/v2', 'indexstr/v2'
   indexerPubkey: string;
   /** Host-injected signer (same seam as observations). */
   signer: (event: {

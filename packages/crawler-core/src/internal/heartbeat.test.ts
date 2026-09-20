@@ -37,7 +37,7 @@ describe('buildHeartbeat emits coarsened stats', () => {
     const event = await buildHeartbeat(
       { pagesIndexed: 12_345, queueSize: 987, published: 55 },
       {
-        source: 'indexstr/2',
+        source: 'indexstr/v2',
         indexerPubkey,
         signer: async (unsigned) => ({ ...unsigned, id: 'x'.repeat(64), pubkey: indexerPubkey, sig: 'y'.repeat(128) }),
         clock: () => 1_800_000_000_000,
