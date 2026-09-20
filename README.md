@@ -3,7 +3,7 @@
 > **Decentralized browser crawler for the SIP-01 index.** Crawlstr v2 turns your
 > browser into a crawl node: it fetches web pages through a hardened SSRF guard,
 > extracts content and links, and publishes signed **kind 39697 web-index
-> observations** to Nostr relays — every event tagged **`source=crawlstr/2`**.
+> observations** to Nostr relays — every event tagged **`source=crawlstr/v2`**.
 
 This is a self-contained v2 app repo, sliced from the web-crawler monorepo.
 Everything needed to build and run Crawlstr v2 is in this tree.
@@ -35,10 +35,10 @@ pnpm --filter crawlstr dev    # http://localhost:8080
 
 ## Source tag
 
-All SIP-01 observations published by this app carry `source=crawlstr/2`
+All SIP-01 observations published by this app carry `source=crawlstr/v2`
 (`apps/crawlstr/src/lib/crawlerNode.ts` → `CRAWLER_SOURCE`), so indexers and
 stats dashboards can distinguish v2 Crawlstr traffic from v1 and from Indexstr
-(`indexstr/2`) nodes.
+(`indexstr/v2`) nodes.
 
 ## Notes
 
