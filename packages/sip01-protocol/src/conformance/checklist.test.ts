@@ -73,7 +73,7 @@ describe('A. Event construction', () => {
     expect(tagValues(event.tags, 'd')[0].startsWith(WEB_INDEX_D_PREFIX)).toBe(true);
   });
 
-  it('A4 x = sha256(title+"\n"+description) over the TRUNCATED published strings', async () => {
+  it('A4 x = sha256(title+"\\n"+description) over the TRUNCATED published strings', async () => {
     const event = (await buildIndexEvent({
       url: 'https://example.com/t',
       title: 'T'.repeat(400),
