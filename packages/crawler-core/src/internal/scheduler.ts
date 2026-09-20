@@ -110,7 +110,7 @@ export class Scheduler {
    *  reservation failed right after the acquire). */
   cancel(url: string): void {
     const domain = this.domainOf(url);
-    if (inFlightDomains.delete(domain)) this.inFlight--;
+    if (this.inFlightDomains.delete(domain)) this.inFlight--;
   }
 
   /** Ms until a request to `url` would be allowed (0 = now). */
