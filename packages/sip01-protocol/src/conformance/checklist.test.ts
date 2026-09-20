@@ -73,7 +73,7 @@ describe('A. Event construction', () => {
     expect(tagValues(event.tags, 'd')[0].startsWith(WEB_INDEX_D_PREFIX)).toBe(true);
   });
 
-  it('A4 x = sha256(title+"\\n"+description) over the TRUNCATED published strings', async () => {
+  it('A4 x = sha256(title+"\n"+description) over the TRUNCATED published strings', async () => {
     const event = (await buildIndexEvent({
       url: 'https://example.com/t',
       title: 'T'.repeat(400),
@@ -103,7 +103,7 @@ describe('A. Event construction', () => {
       tags: ['a', 'b'],
       language: 'en',
       published: 1754600000,
-      source: 'crawlstr/2',
+      source: 'crawlstr/v2',
       type: 'page',
     }))!;
     for (const name of ['d', 'u', 'v', 'alt']) {
@@ -230,8 +230,8 @@ describe('A. Event construction', () => {
   });
 
   it('A16 source ≤100, informational <name>/<version>', async () => {
-    const event = (await buildIndexEvent({ ...BASE, source: '  crawlstr/2  ' }))!;
-    expect(tagValues(event.tags, 'source')).toEqual(['crawlstr/2']);
+    const event = (await buildIndexEvent({ ...BASE, source: '  crawlstr/v2  ' }))!;
+    expect(tagValues(event.tags, 'source')).toEqual(['crawlstr/v2']);
     const long = (await buildIndexEvent({ ...BASE, source: 'x'.repeat(150) }))!;
     expect(tagValues(long.tags, 'source')[0].length).toBe(100);
     expect(tagValues(event.tags, 'source')[0]).toMatch(/^[^\s]+\/[^\s]+$/);
@@ -273,7 +273,7 @@ describe('A. Event construction', () => {
       tags: ['nostr'],
       language: 'en',
       published: 1754600000,
-      source: 'crawlstr/2',
+      source: 'crawlstr/v2',
       type: 'page',
       platform: 'web',
       category: 'docs',
