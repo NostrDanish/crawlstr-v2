@@ -60,9 +60,9 @@ export function AccountSwitcher({ onAddAccountClick }: AccountSwitcherProps) {
               <AvatarFallback>
                 {isCurrentUserPending ? (
                   <Skeleton className='size-full rounded-full' />
-                  ) : (
+                ) : (
                   getDisplayName(currentUser)?.charAt(0) || <UserIcon />
-                  )}
+                )}
               </AvatarFallback>
             </Avatar>
             <div className='flex-1 truncate'>
