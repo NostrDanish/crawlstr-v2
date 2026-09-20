@@ -33,7 +33,7 @@ const fakeSigner = async (event: {
 function makeConfig(overrides: Partial<CrawlerConfig> = {}): CrawlerConfig {
   return {
     dbName: `crawler-core-public-test-${Math.random().toString(36).slice(2)}`,
-    source: 'crawlstr/2',
+    source: 'crawlstr/v2',
     signer: fakeSigner,
     indexerPubkey: 'ab'.repeat(32),
     indexerNpub: 'npub1example',
@@ -195,7 +195,7 @@ describe('heartbeat read seam', () => {
       shard,
       stats: { pagesIndexed: 1, queueSize: 2, published: 3 },
     }),
-    tags: [['source', 'indexstr/2']],
+    tags: [['source', 'indexstr/v2']],
   });
 
   it('networkHeartbeats returns [] without a heartbeatQuery transport', async () => {
@@ -230,7 +230,7 @@ describe('heartbeat read seam', () => {
     expect(heartbeats.map((hb) => hb.pubkey)).toEqual([nodeA, nodeB]); // newest first
     expect(heartbeats[0].createdAt).toBe(now - 10);
     expect(heartbeats[0].shard).toBe('AB'); // normalized uppercase
-    expect(heartbeats[0].source).toBe('indexstr/2');
+    expect(heartbeats[0].source).toBe('indexstr/v2');
     expect(heartbeats.every((hb) => isNodeLive(hb, now))).toBe(true);
   });
 

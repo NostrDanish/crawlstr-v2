@@ -71,7 +71,7 @@ export interface SignableEvent {
 export interface CrawlerConfig {
   /** IndexedDB database name ('crawlstr-crawler' | 'indexstr-crawler'). */
   dbName: string;
-  /** Indexer software id for the `source` tag ('crawlstr/2' | 'indexstr/2', ≤100 chars). */
+  /** Indexer software id for the `source` tag ('crawlstr/v2' | 'indexstr/v2', ≤100 chars). */
   source: string;
   /** Host-injected signer (NostrEvent template → signed event). Defaults to
    *  the device's dedicated indexer identity from @sip01/protocol when
